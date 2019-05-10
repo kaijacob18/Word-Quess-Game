@@ -1,12 +1,47 @@
 // array of words for hangman //
-var basketballplayers = ["michael jordan", "charles barkley", "magic johnson", "larry bird", "isiah thomas", , "kobe bryant", "dennis rodman", "hakeem olajuwon", "reggie miller", "chris webber", "julius erving", "karreem adul jabbar", "karl malone", "shaquille oneal", "scottie pippen", "kevin duran", "james harden", "lebron james", "derrick rose", "chris paul", "dwayne wade", ];
+var basketballPlayers = ["Michael Jordan", "Charles Barkley", "Magic Johnson", "Larry Bird", "Isiah Thomas", , "Kobe Bryant", "Dennis Rodman", "Hakeem Olajuwon", "Reggie Miller", "Chris Webber", "Julius Erving", "Karreem Adul Jabbar", "Karl Malone", "Shaquille Oneal", "Scottie Pippen", "Kevin Duran", "James Harden", "Lebron James", "Derrick Rose", "Chris Paul", "Dwayne Wade", ];
 
-var basketballplayer = basketballplayers[Math.floor(Math.random() * basketballplayers.length)];
+var LegendPlayers = basketballPlayers[Math.floor(Math.random() * basketballPlayers.length)];
 
-var solutionarray =[];
-for (var i = 0; i < basketballplayers.length; i++){
-    solutionArray[i] = "_";
+var PickedPlayer = basketballPlayers[LegendPlayers];
+var numberofGuessCount = 9;
+var wins =0;
+var losses=0;
+var wrongGuessLetter="";
+var rightGuessLetter="";
+var boardGame="";
+for (var i = 0; i < PickedPlayer.length; i++){
+
+    boardGame[i]="_";
 }
+
+var userInput = "";
+
+function resetGame(){
+    
+    var basketballPlayers = ["Michael Jordan", "Charles Barkley", "Magic Johnson", "Larry Bird", "Isiah Thomas", , "Kobe Bryant", "Dennis Rodman", "Hakeem Olajuwon", "Reggie Miller", "Chris Webber", "Julius Erving", "Karreem Adul Jabbar", "Karl Malone", "Shaquille Oneal", "Scottie Pippen", "Kevin Duran", "James Harden", "Lebron James", "Derrick Rose", "Chris Paul", "Dwayne Wade", ];
+
+    var LegendPlayers = basketballPlayers[Math.floor(Math.random() * basketballPlayers.length)];
+    
+    var PickedPlayer = basketballPlayers[LegendPlayers];
+    var numberofGuessCount = 9;
+    var wrongGuessLetter="";
+    var rightGuessLetter="";
+    var boardGame="";
+    for (var i = 0; i < PickedPlayer.length; i++){
+    
+        boardGame[i]="_";
+    }
+    
+    var userInput = "";
+
+}
+
+document.onkeyup = function(event){
+    userInput = event.key.toLowerCase();
+}
+
+var
 
 var remainingLetters = basketballplayers.length;
 
